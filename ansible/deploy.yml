@@ -9,7 +9,7 @@
         dest: "/opt/tomcat/webapps/MavenWebAppExt.war"
         remote_src: no
      
-   - name: Restart tomcat
-     systemd:
-       name: tomcat
-       state: restarted
+    - name: Restart tomcat
+      systemd:
+        name: tomcat
+        state: restarted
