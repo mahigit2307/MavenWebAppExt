@@ -3,13 +3,13 @@
   hosts: web
   become: yes
   tasks:
-  - name: Cop war file to tomcat
-    copy:
-     src: "/var/snap/jenkins/4874/workspace/MavenWebAppExtCiCd/target/MavenWebAppExt.war"
-     dest: "/opt/tomcat/webapps/MavenWebAppExt.war"
-     remote_src: no
+   - name: Cop war file to tomcat
+     copy:
+       src: "/var/snap/jenkins/4874/workspace/MavenWebAppExtCiCd/target/MavenWebAppExt.war"
+       dest: "/opt/tomcat/webapps/MavenWebAppExt.war"
+       remote_src: no
      
   - name: Restart tomcat
     systemd:
-     name: tomcat
-     state: restarted
+      name: tomcat
+      state: restarted
